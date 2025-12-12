@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <div class="div1">
+    <header>Calculadora</header>
+    <section class="tela">
+        <p id="result">0</p>
+    </section>
+    <section class="tecl">
+        <div class="div2"><input type="button" value="7" id="number" onclick="addNumber(7)">
+        <input type="button" value="8" id="number" onclick="addNumber(8)">
+        <input type="button" value="9" id="number" onclick="addNumber(9)">
+        <input type="button" value="DEL" id="del" onclick="del()"><br>
+        <input type="button" value="4" id="number" onclick="addNumber(4)">
+        <input type="button" value="5" id="number" onclick="addNumber(5)">
+        <input type="button" value="6" id="number" onclick="addNumber(6)">
+        <input type="button" value="+" id="number" onclick="mais()"><br>
+        <input type="button" value="1" id="number" onclick="addNumber(1)">
+        <input type="button" value="2" id="number" onclick="addNumber(2)">
+        <input type="button" value="3" id="number" onclick="addNumber(3)">
+        <input type="button" value="-" id="number" onclick="menos()"><br>
+        <input type="button" value="." id="number" onclick="virgula()">
+        <input type="button" value="0" id="number" onclick="zero()">
+        <input type="button" value="/" id="number" onclick="divisao()">
+        <input type="button" value="X" id="number" onclick="x()"><br>
+        <input type="button" value="RESET" id="reset" onclick="reset()">
+        <input type="button" value="=" id="igual" onclick="igual()">
+    </div>
+    </section>
+    </div>
+    <script src="calc.js"></script>
+</body>
+</html>
