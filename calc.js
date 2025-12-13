@@ -46,6 +46,10 @@ function del(){
 function mais(){
     let conteudo = valor.innerHTML.slice(-1);
     let verif = valor.innerHTML
+    if(isNaN(eval(verif)) || eval(verif)==Infinity){
+        valor.innerHTML = "ERROR"
+        return
+    }
     if(conteudo=="+"||conteudo=="-"||conteudo=="."||conteudo=="*"||conteudo=="/"){
         valor.innerHTML= valor.innerHTML.slice(0,-1);
         valor.innerHTML+="+"
@@ -61,9 +65,14 @@ function mais(){
     }
 }
 
+
 function menos(){
     let conteudo = valor.innerHTML.slice(-1);
     let verif = valor.innerHTML
+    if(isNaN(eval(verif)) || eval(verif)==Infinity){
+        valor.innerHTML = "ERROR"
+        return
+    }
     if(conteudo=="+"||conteudo=="-"||conteudo=="."||conteudo=="*"||conteudo=="/"){
         valor.innerHTML= valor.innerHTML.slice(0,-1);
         valor.innerHTML+="-"
@@ -84,6 +93,10 @@ function virgula(){
     let penultimo = partes[partes.length - 2]
     let ultimonumero = partes.pop()    
     let conteudo = valor.innerHTML.slice(-1);
+    if(valor.innerHTML=="ERROR"){
+        valor.innerHTML+=""
+        return
+    }
     if(ultimonumero.includes(".")){
         return
     }
@@ -98,10 +111,13 @@ function virgula(){
         valor.innerHTML+= "."
     }
 }
-
 function divisao(){
     let conteudo = valor.innerHTML.slice(-1);
     let verif = valor.innerHTML
+    if(isNaN(eval(verif)) || eval(verif)==Infinity){
+        valor.innerHTML = "ERROR"
+        return
+    }
     if(conteudo=="+"||conteudo=="-"||conteudo=="."||conteudo=="*"||conteudo=="/"){
         valor.innerHTML= valor.innerHTML.slice(0,-1);
         valor.innerHTML+="/"
@@ -119,6 +135,10 @@ function divisao(){
 function x(){
     let conteudo = valor.innerHTML.slice(-1);
     let verif = valor.innerHTML
+    if(isNaN(eval(verif)) || eval(verif)==Infinity){
+        valor.innerHTML = "ERROR"
+        return
+    }
     if(conteudo=="+"||conteudo=="-"||conteudo=="."||conteudo=="*"||conteudo=="/"){
         valor.innerHTML= valor.innerHTML.slice(0,-1);
         valor.innerHTML+="*"
