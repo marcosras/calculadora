@@ -73,18 +73,18 @@ function menos(){
         valor.innerHTML = "ERROR"
         return
     }
-    if(conteudo=="+"||conteudo=="-"||conteudo=="."||conteudo=="*"||conteudo=="/"){
-        valor.innerHTML= valor.innerHTML.slice(0,-1);
-        valor.innerHTML+="-"
+    if(conteudo=="+"||conteudo=="-"||conteudo=="."||conteudo=="*"||conteudo=="/"){    
+        valor.innerHTML = verif.slice(-1);
+        valor.innerHTML += "-"
         return;
     }
     if(verif.includes("+")||verif.includes("-")||verif.includes("*")||verif.includes("/")){
         valor.innerHTML = eval(valor.innerHTML)
-        valor.innerHTML+="-"
+        valor.innerHTML += "-"
         return
     }
     else{
-        valor.innerHTML+= "-"
+        valor.innerHTML += "-"
     }
 }
 
